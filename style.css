@@ -9,7 +9,7 @@ body{
 }
 
 main{
-    background-color: grey;
+    background-color: rgb(235, 241, 240);
     display: flex;
     flex-flow: column wrap;
     justify-self: center;
@@ -69,7 +69,7 @@ ul li a:hover{
 /*Sección 1 - Portada*/
 
 .portada{
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 65%, grey), url(img/beautiful-forested-mountains-fog.jpg);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 65%, rgb(235, 241, 240)), url(/img/portada.jpg);
     width: 100%;
     height: 600px;
     background-size: cover;
@@ -79,7 +79,7 @@ ul li a:hover{
     justify-content: center;
     align-content: center;
     font-size: 30px;
-    color: antiquewhite;
+    color: rgb(1, 8, 0);
 }
 
 .portada h1, span {
