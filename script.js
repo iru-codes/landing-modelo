@@ -1,3 +1,5 @@
+import app from "./firebase-init.js"
+
 //Menu de navegación
 let navLinks = document.querySelectorAll('.nav-link')
 
