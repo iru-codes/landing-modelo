@@ -16,7 +16,7 @@ jobs:
       # Paso 2: Configura Node.js (opcional, por compatibilidad con Firebase Actions)
       - uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '16'
 
       # Paso 3: Salta el build (sitio estático)
       - run: echo "No build step necessary for static site"
