@@ -4,7 +4,8 @@
   "description": "Esta página es un modelo de Landing Page que incluye algunas animaciones y efectos simples pero interesantes.",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo 'No build step necessary'"
   },
   "keywords": [],
   "author": "",
@@ -13,3 +14,4 @@
     "firebase": "^11.2.0"
   }
 }
+

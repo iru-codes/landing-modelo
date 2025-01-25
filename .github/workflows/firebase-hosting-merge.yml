@@ -10,11 +10,22 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
+      # Paso 1: Clona el repositorio
       - uses: actions/checkout@v4
-      - run: npm ci && npm run build
+
+      # Paso 2: Configura Node.js (opcional, por compatibilidad con Firebase Actions)
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      # Paso 3: Salta el build (sitio estático)
+      - run: echo "No build step necessary for static site"
+
+      # Paso 4: Despliega el sitio en Firebase Hosting
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_LANDING_PAGE_MODELO }}
           channelId: live
           projectId: landing-page-modelo
+
