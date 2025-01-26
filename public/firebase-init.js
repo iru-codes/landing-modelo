@@ -7,7 +7,7 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAbg8UVtowKh_q48bchA3OowHQpTG2A6ac",
+  apiKey: "AIzaSyBqMbStmynQsCKpztJWGJ74a27NTUDs6W4",
   authDomain: "landing-page-modelo.firebaseapp.com",
   projectId: "landing-page-modelo",
   storageBucket: "landing-page-modelo.firebasestorage.app",
@@ -20,3 +20,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
+export { app, analytics };
