@@ -116,7 +116,7 @@ ul li a:hover{
 }
     
 .cards{
-    width: 80%;
+    width: 60%;
     display: flex;
     flex-flow: row wrap;
     align-self: center;
@@ -127,10 +127,12 @@ ul li a:hover{
     display: flex;
     flex-flow: row nowrap;
     gap: 5%;
-    margin: 5% 0 5% 0;
+    margin: 5% 0;
+    padding: 2%;
     opacity: 0;
     transform: translateX(0);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    border: 1px solid rgb(2, 14, 0);
 }
 
 .card.left-visible {
@@ -140,9 +142,10 @@ ul li a:hover{
     animation: slideInRight 1.5s ease forwards;
 }
   
-
 .card img{
-    width: 40%;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .card_texto{
@@ -151,9 +154,10 @@ ul li a:hover{
     align-items: center;
     align-self: center;
     width: 100%;
-    height: 50%;
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    height: 100%;
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
     gap: 1%;
+    text-align: justify;
 }
 
 
