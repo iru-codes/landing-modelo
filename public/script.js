@@ -17,6 +17,20 @@ navLinks.forEach(link => {
   })
 })
 
+//Flecha flotante - visibilidad
+document.addEventListener("DOMContentLoaded", function(){
+    let arrow = document.querySelector(".flotant_arrow")
+    let section2 = document.querySelector("#seccion_2").offsetTop
+
+    window.addEventListener("scroll", function() {
+        if (window.scrollY >= section2) {
+            arrow.style.cssText = "visibility: visible !important; opacity: 1; pointer-events: auto;"
+        } else {
+            arrow.style.cssText = "visibility: hidden !important; opacity: 0; pointer-events: none;"
+        }
+    })
+})
+
 
 //Flecha de auto-scroll hacia arriba
 let scrollToTopArrow = document.getElementById("scroll-to-top")
@@ -46,3 +60,17 @@ let observer = new IntersectionObserver((entries, observer) =>{
 }, { threshold: 0.3 })
 
 cards.forEach(card => observer.observe(card))
+
+//Menú hamburguesa
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.querySelector(".menu_items");
+    const hamburger = document.querySelector(".hamburger");
+
+    function toggleMenu() {
+        menu.classList.toggle("show");
+    }
+
+    // Agregamos el evento click al botón hamburguesa
+    hamburger.addEventListener("click", toggleMenu);
+});
