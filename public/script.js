@@ -12,7 +12,7 @@ navLinks.forEach(link => {
 
     targetSection.scrollIntoView({
       behavior: 'smooth', 
-      block: 'center' 
+      block: 'start' 
     })
   })
 })
@@ -43,23 +43,19 @@ scrollToTopArrow.addEventListener("click", () =>{
 })
 
 //Animación de las tarjetas
-let cards = document.querySelectorAll(".card")
-let observer = new IntersectionObserver((entries, observer) =>{
+let cards = document.querySelectorAll(".card");
+
+let observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            let cardIndex = Array.from(cards).indexOf(entry.target)
-
-            if (cardIndex % 2 === 0) {
-                entry.target.classList.add("left-visible")
-            } else {
-                entry.target.classList.add("right-visible")
-            }
-            observer.unobserve(entry.target)
+            let cardIndex = Array.from(cards).indexOf(entry.target);
+            entry.target.style.transitionDelay = `${cardIndex * 0.3}s`; 
+            entry.target.classList.add(cardIndex % 2 === 0 ? "left-visible" : "right-visible");
         }
-    })
-}, { threshold: 0.3 })
+    });
+}, { root: null, threshold: 0.3 });
 
-cards.forEach(card => observer.observe(card))
+cards.forEach(card => observer.observe(card));
 
 //Menú hamburguesa
 
