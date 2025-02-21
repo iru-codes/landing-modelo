@@ -187,7 +187,9 @@ p.animated-text span{
 
 /*Botones*/
 
-button{
+.CTA{
+    
+    text-decoration: none;
     background-color: #db366d;
     font-family: "Blinker", serif;
     color: white;
@@ -196,19 +198,14 @@ button{
     margin: 10px;
     font-size: 1.5rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     width: fit-content;
     transition: all 0.2s ease-in-out;
     box-shadow: 0 3px #322c3a;
 }
 
-button:hover{
+.CTA:hover{
     transform: scale(1.1);
-}
-
-.CTA a{
-    text-decoration: none;
-    color: white;
 }
 
 /*Sección 2 - Cards*/
