@@ -43,19 +43,25 @@ scrollToTopArrow.addEventListener("click", () =>{
 })
 
 //Animación de las tarjetas
-let cards = document.querySelectorAll(".card");
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".card");
 
-let observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            let cardIndex = Array.from(cards).indexOf(entry.target);
-            entry.target.style.transitionDelay = `${cardIndex * 0.3}s`; 
-            entry.target.classList.add(cardIndex % 2 === 0 ? "left-visible" : "right-visible");
-        }
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible"); // Agrega la clase para la animación
+                observer.unobserve(entry.target); // Deja de observar la card una vez que apareció
+                console.log("Card visible:", entry.target); // Para verificar en consola
+            }
+        });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => {
+        observer.observe(card);
     });
-}, { root: null, threshold: 0.3 });
+});
 
-cards.forEach(card => observer.observe(card));
+
 
 //Menú hamburguesa
 
