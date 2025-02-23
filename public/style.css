@@ -140,6 +140,12 @@ header{
     color: rgb(1, 8, 0);
 }
 
+@media (max-width: 900px){
+    .portada{
+        background-position: center center;
+    }
+}
+
 /*Título*/
 .title{
     display: flex;
