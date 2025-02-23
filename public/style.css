@@ -11,12 +11,14 @@ body{
 }
 
 main{
+    margin: 0 auto;
     background-color: #ebf1f0;
     display: flex;
     flex-flow: column wrap;
     justify-self: center;
     position: relative;
     max-width: 1200px;
+    width: 100%;
 }
 
 /*Encabezado y menu navegable*/
@@ -130,12 +132,6 @@ header{
     align-content: center;
     font-size: 30px;
     color: rgb(1, 8, 0);
-}
-
-@media (max-width: 480px) {
-    .portada {
-      background-size: contain;
-    }
 }
 
 /*Título*/
@@ -316,25 +312,24 @@ p.animated-text span{
     opacity: 1;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     .cards {
         width: 90%;
-        margin: 10% auto;
+        margin: 0% auto;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10% 0;
     }
 
     .card {
         width: 100%;
         min-width: auto;
-        padding: 5%;
-        margin: 5% 0;
+        margin: 3% 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 15px;
+        padding: 3% 0;
     }
 
     .card_contenido {
@@ -379,12 +374,13 @@ p.animated-text span{
 
 /*Íconos*/
 
-.icons{
+#iconos{
     display: flex;
     flex-flow: column wrap;
+    margin: 5% 0;
 }
 
-.icons ul{
+#iconos ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -397,13 +393,18 @@ p.animated-text span{
     width: 100%;
 }
 
-@media (max-width: 800px){    
-    .icons ul{
+@media (max-width: 900px){    
+    #iconos ul{
         flex-direction: column;
+    }
+
+    #iconos{
+        width: 80%;
+        padding: 10% 0 0 0;
     }
 }
 
-.icons ul li{
+#iconos ul li{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -414,7 +415,7 @@ p.animated-text span{
     color: whitesmoke;
 }
 
-.icons i{
+#iconos i{
     margin-right: 10px;
     font-size: 50px;
 }
@@ -427,11 +428,10 @@ footer{
     flex-flow: column wrap;
     align-content: center;
     color: antiquewhite;
-    font-size:x-small;
+    font-size: medium;
     font-family: "Blinker", serif;
     font-weight: 300;
     text-align: center;
-    padding: 1% 0;
 }
 
 .firma{
@@ -457,12 +457,17 @@ footer{
     visibility: visible;
 }
 
-@media (max-width: 1300px){
+@media (max-width: 900px){
     .flotant_arrow{
-        bottom: 160px;
+        bottom: 140px;
         right: 5px;
         font-size: 50px;
         color: #db366d;
+    }
+
+    footer{
+        margin-top: 50px;
+        font-size: small;
     }
 }
 
