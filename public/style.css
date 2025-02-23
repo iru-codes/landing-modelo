@@ -78,7 +78,7 @@ header{
     color: whitesmoke;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .hamburger {
         display: block; /* Se muestra el botón */
     }
@@ -143,6 +143,7 @@ header{
 @media (max-width: 900px){
     .portada{
         background-position: center center;
+        height: 300px;
     }
 }
 
