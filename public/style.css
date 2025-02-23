@@ -160,7 +160,7 @@ header{
 
 .title h1 {
     display: inline-block;
-    font-size: clamp(5.5rem, 8vw, 6.5rem);
+    font-size: clamp(4rem, 8vw, 6.5rem);
     color: #0f0a67;
     font-family: "Geologica", serif;
     margin: 10px;
@@ -168,7 +168,7 @@ header{
 
 p.animated-text span{
     font-family: "Gruppo", serif;
-    font-size: 65px;
+    font-size: clamp(2rem, 4vw, 3.25rem);
     opacity: 0;
     transform: translateY(20px);
     display: inline-block;
